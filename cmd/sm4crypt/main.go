@@ -40,7 +40,7 @@ func main() {
 	if *random == true {
 		var key []byte
 		var err error
-		key = make([]byte, 32)
+		key = make([]byte, 16)
 		_, err = io.ReadFull(rand.Reader, key)
 		if err != nil {
 			log.Fatal(err)
