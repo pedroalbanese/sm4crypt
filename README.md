@@ -6,7 +6,7 @@
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/pedroalbanese/sm4crypt)](https://github.com/pedroalbanese/sm4crypt/releases)
 ### Command-line GM/T 0002-2012 SM4-GCM Encryption Tool
 <pre>Usage of sm4crypt:
-sm4crypt [-d] -p "pass" [-i N] [-s "salt"] -f <file.ext>
+sm4crypt [-d] -p "pass" [-i N] [-s "salt"] -f &lt;file.ext&gt;
   -d    Decrypt instead Encrypt.
   -f string
         Target file. ('-' for STDIN)
