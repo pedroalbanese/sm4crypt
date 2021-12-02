@@ -30,9 +30,10 @@ func main() {
 	flag.Parse()
 
 	if len(os.Args) < 2 {
-		fmt.Println("SM4-GCM Encryption Tool - ALBANESE Lab (c) 2020-2021")
-		fmt.Println("GM/T 0002-2012 SM4 block cipher in Galois/Counter Mode\n")
-		fmt.Println("Usage of", os.Args[0]+":")
+		fmt.Fprintln(os.Stderr, "SM4-GCM Encryption Tool - ALBANESE Lab (c) 2020-2021")
+		fmt.Fprintln(os.Stderr, "GM/T 0002-2012 SM4 block cipher in Galois/Counter Mode\n")
+		fmt.Fprintln(os.Stderr, "Usage of "+os.Args[0]+":")
+		fmt.Fprintln(os.Stderr, os.Args[0]+" [-d] -p \"pass\" [-i N] [-s \"salt\"] -f <file.ext>")
 		flag.PrintDefaults()
 		os.Exit(1)
 	}
