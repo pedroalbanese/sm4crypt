@@ -6,6 +6,7 @@
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/pedroalbanese/sm4crypt)](https://github.com/pedroalbanese/sm4crypt/releases)
 ### Command-line GM/T 0002-2012 SM4-GCM Encryption Tool
 <pre>Usage of sm4crypt:
+sm4crypt [-d] -p "pass" [-i N] [-s "salt"] -f <file.ext>
   -d    Decrypt instead Encrypt.
   -f string
         Target file. ('-' for STDIN)
@@ -18,6 +19,12 @@
   -r    Generate random 128-bit cryptographic key.
   -s string
         Salt. (for PBKDF2)</pre>
+
+### Example of encryption/decryption:
+```sh
+./sm4crypt -k $128bitkey -f plaintext.ext > ciphertext.ext
+./sm4crypt -d -k $128bitkey -f ciphertext.ext > plaintext.ext
+```
 
 ## License
 
