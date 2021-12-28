@@ -1,5 +1,6 @@
 # SM4Crypt
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](https://github.com/pedroalbanese/sm4crypt/blob/master/LICENSE.md) 
+[![GitHub downloads](https://img.shields.io/github/downloads/pedroalbanese/sm4crypt/total.svg?logo=github&logoColor=white)](https://github.com/pedroalbanese/sm4crypt/releases)
 [![GoDoc](https://godoc.org/github.com/pedroalbanese/sm4crypt?status.png)](http://godoc.org/github.com/pedroalbanese/sm4crypt)
 [![Go Report Card](https://goreportcard.com/badge/github.com/pedroalbanese/sm4crypt)](https://goreportcard.com/report/github.com/pedroalbanese/sm4crypt)
 [![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/pedroalbanese/sm4crypt)](https://golang.org)
