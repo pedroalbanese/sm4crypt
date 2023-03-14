@@ -8,7 +8,7 @@
 ### Command-line GM/T 0002-2012 SM4-GCM Encryption Tool
 <pre>Usage of sm4crypt:
 sm4crypt [-d] -p "pass" [-i N] [-s "salt"] -f &lt;file.ext&gt;
-  -d    Decrypt instead Encrypt.
+  -d    Decrypt instead of Encrypt.
   -f string
         Target file. ('-' for STDIN)
   -i int
