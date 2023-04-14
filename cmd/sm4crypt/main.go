@@ -17,11 +17,12 @@ import (
 )
 
 var (
+	aad    = flag.String("a", "", "Additional Associated Data.")
 	dec    = flag.Bool("d", false, "Decrypt instead of Encrypt.")
 	file   = flag.String("f", "", "Target file. ('-' for STDIN)")
 	iter   = flag.Int("i", 1024, "Iterations. (for PBKDF2)")
 	key    = flag.String("k", "", "128-bit key to Encrypt/Decrypt.")
-	pbkdf  = flag.String("p", "", "Password-based key derivation function2.")
+	pbkdf  = flag.String("p", "", "Password-based key derivation function.")
 	random = flag.Bool("r", false, "Generate random 128-bit cryptographic key.")
 	salt   = flag.String("s", "", "Salt. (for PBKDF2)")
 )
@@ -97,7 +98,7 @@ func main() {
 			log.Fatal(err)
 		}
 
-		out := aead.Seal(nonce, nonce, msg, nil)
+		out := aead.Seal(nonce, nonce, msg, []byte(*aad))
 		fmt.Printf("%s", out)
 
 		os.Exit(0)
@@ -106,7 +107,7 @@ func main() {
 	if *dec == true {
 		nonce, msg := msg[:aead.NonceSize()], msg[aead.NonceSize():]
 
-		out, err := aead.Open(nil, nonce, msg, nil)
+		out, err := aead.Open(nil, nonce, msg, []byte(*aad))
 		if err != nil {
 			log.Fatal(err)
 		}
